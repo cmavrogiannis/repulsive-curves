@@ -587,7 +587,7 @@ namespace LWS {
         long project_end = Utils::currentTimeMilliseconds();
 
         std::cout << "  Sobolev gradient norm = " << soboDot << std::endl;
-        if (__isnan(soboDot)) {
+        if (isnan(soboDot)) {
             std::cout << "Sobolev projection produced NaN; aborting." << std::endl;
             return false;
         }
